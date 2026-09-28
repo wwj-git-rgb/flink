@@ -1,0 +1,297 @@
+# Instincts generated from https://github.com/wwj-git-rgb/flink
+# Generated: 2026-05-22T18:01:44.203Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: flink-commit-ticket-ref
+trigger: "when writing a commit message"
+confidence: 0.75
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/flink
+---
+
+# Flink Commit Ticket Ref
+
+## Action
+
+Include ticket reference matching pattern: ^\[([A-Z]+-\d+)\]
+
+## Evidence
+
+- Ticket pattern detected in commits
+- Pattern: ^\[([A-Z]+-\d+)\]
+
+---
+id: flink-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/flink
+---
+
+# Flink Commit Length
+
+## Action
+
+Write moderate-length commit messages (~59 characters)
+
+## Evidence
+
+- Average commit message length: 59 chars
+- Based on 4 commits
+
+---
+id: flink-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/flink
+---
+
+# Flink Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: flink-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/flink
+---
+
+# Flink Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: flink-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/flink
+---
+
+# Flink Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: flink-instinct-class-naming
+trigger: "When creating a new Java class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: flink-instinct-function-naming
+trigger: "When defining a Java function/method"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Function Naming
+
+## Action
+
+Use camelCase for the function name
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: flink-instinct-constant-naming
+trigger: "When declaring a constant in Java"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for the constant name
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: flink-instinct-file-naming
+trigger: "When naming a Java source file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct File Naming
+
+## Action
+
+Use PascalCase for the filename
+
+## Evidence
+
+- Pattern in namingConventions.files: PascalCase
+
+---
+id: flink-instinct-import-style
+trigger: "When importing Java classes"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Import Style
+
+## Action
+
+Use relative imports
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: flink-instinct-export-style
+trigger: "When exporting Java classes or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: flink-instinct-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Commit Format
+
+## Action
+
+Start the message with a ticket reference in the format [FLINK-XXXX][scope] Description
+
+## Evidence
+
+- Seen in commit: [FLINK-39729][table] Fix flaky CorrelateRestoreTest by using materialized data assertion
+- Pattern in commits.ticketPattern: ^\[([A-Z]+-\d+)\]
+
+---
+id: flink-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 59 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 59
+
+---
+id: flink-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Test Location
+
+## Action
+
+Place tests in the same folder as source code (mixed test location)
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation: mixed
+
+---
+id: flink-instinct-workflow-nightly
+trigger: "When configuring CI workflows"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/flink
+---
+
+# Flink Instinct Workflow Nightly
+
+## Action
+
+Include a nightly trigger in the workflow configuration
+
+## Evidence
+
+- Pattern in architecture.configFiles: .github/workflows/nightly-trigger.yml
+
